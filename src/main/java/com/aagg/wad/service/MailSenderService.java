@@ -44,7 +44,7 @@ public class MailSenderService {
 		helper.setText(body, true);
 		// ad
 		helper.addInline(image.getName(), imageSource, image.getContentType());
-		helper.setFrom("basant1993.dev@gmail.com");
+		helper.setFrom("emilio.fonseca078@gmail.com");
 		sender.send(mail);
 		return "mail send successfully";
 	}
@@ -60,7 +60,7 @@ public class MailSenderService {
 		attributes.add("Rol: " + user.getRoles().stream().collect(Collectors.toList()).get(0).getRole());
 
 		content.setFeatures(attributes);
-		content.setMessage("Este es un correo de bienvenida al sistema desarrollado en la optativa Web Application Development en IPN ESCOM 2021.");
+		content.setMessage("Este es un correo de bienvenida al sistema desarrollado en IPN ESCOM 2025.");
 		content.setFeatures(attributes);
 		return content;
 	}
